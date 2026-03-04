@@ -27,4 +27,4 @@ jobs:
 
       - name: Deploy static site to S3 bucket
         run: |
-          npm install && npm run build && aws s3 sync ./out s3://${{secrets.AWS_BUCKET_NAME}}/simple-sweet/pour --delete
+          npm install && npm run build && aws s3 sync ./dist s3://${{secrets.AWS_BUCKET_NAME}}/simple-sweet/pour --delete
